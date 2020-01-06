@@ -46,7 +46,7 @@ def register(request):
                 return HttpResponse('Email already exists')
             else:
                 user = User.objects.create_user(username=user_name, password=password,email=email,first_name=first_name,last_name=last_name)
-                user.save()
+                user.save();
                 print('User Created')
                 return redirect("login")
         else:
